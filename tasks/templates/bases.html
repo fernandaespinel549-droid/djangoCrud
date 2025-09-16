@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django Pag</title>
+</head>
+<body>
+   <ul> 
+    <li><a href="{% url 'home' %}">Inicio</a></li>
+        <li><a href="{% url 'singup' %}">Registro</a></li>
+        <li><a href="{% url 'taskss' %}">Tareas</a></li>
+        <li><a href="{% url 'create_task' %}">Crear</a></li>
+
+    {% if user.is_authenticated %}
+        <li><a href="{% url 'signout' %}">Cerrar Sesion</a></li>
+    {% else %}
+        <li><a href="{% url 'signin' %}">Iniciar Sesion</a></li>
+   {% endif %}
+
+
+
+   </ul>
+   {% block content %}
+
+   {% endblock %}
+
+
+</body>
+</html>
