@@ -6,8 +6,6 @@
         <li>
             <h2>{{ task.title }}</h2>
             <p>{{ task.descripcion }}</p>
-
-            <!-- Botones apuntando al admin -->
             <a href="/admin/tasks/task/{{ task.pk }}/change/" class="btn btn-info btn-sm">Seleccionar</a>
             <a href="/admin/tasks/task/{{ task.pk }}/change/" class="btn btn-warning btn-sm">Editar</a>
             <a href="/admin/tasks/task/{{ task.pk }}/delete/" class="btn btn-danger btn-sm">Borrar</a>
